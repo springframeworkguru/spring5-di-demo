@@ -1,4 +1,4 @@
-package guru.springframework.services;
+package guru.services;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
