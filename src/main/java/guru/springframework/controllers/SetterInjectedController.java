@@ -6,7 +6,7 @@ import guru.springframework.services.GreetingServiceImpl;
 /**
  * Created by jt on 5/24/17.
  */
-public class GetterInjectedController {
+public class SetterInjectedController {
     private GreetingService greetingService;
 
     public String sayHello(){
