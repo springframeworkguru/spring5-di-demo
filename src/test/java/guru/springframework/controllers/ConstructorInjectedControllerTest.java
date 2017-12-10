@@ -4,6 +4,8 @@ import guru.services.GreetingServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 /**
  * Created by jt on 5/24/17.
  */
