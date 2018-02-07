@@ -1,8 +1,15 @@
 package guru.springframework.examplebeans;
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+
 /**
  * Created by jt on 6/7/17.
  */
+@Configuration
+@ConfigurationProperties(prefix = "guru")
+@PropertySource(value = "classpath:datasource.properties")
 public class FakeDataSource {
     private String user;
     private String password;
@@ -31,4 +38,5 @@ public class FakeDataSource {
     public void setUrl(String url) {
         this.url = url;
     }
+
 }
