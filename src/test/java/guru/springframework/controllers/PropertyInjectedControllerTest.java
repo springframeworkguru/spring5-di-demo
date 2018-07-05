@@ -21,6 +21,7 @@ public class PropertyInjectedControllerTest {
 
     @Test
     public void testGreeting() throws Exception {
+        System.out.println(propertyInjectedController.sayHello());
         assertEquals(GreetingServiceImpl.HELLO_GURUS, propertyInjectedController.sayHello());
     }
 }
