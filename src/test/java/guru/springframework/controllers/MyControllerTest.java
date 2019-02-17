@@ -2,8 +2,9 @@ package guru.springframework.controllers;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -15,7 +16,7 @@ import static org.junit.Assert.assertEquals;
 @ActiveProfiles(profiles = "default" )
 public class MyControllerTest {
 
-    @Autowired
+    @MockBean
     private MyController mycontroller;
 
 
@@ -28,6 +29,6 @@ public class MyControllerTest {
     @Test
     public void testDeGreeting() throws Exception{
         String result = mycontroller.hello();
-        assertEquals("Primärer Grußdienst", result);
+        assertEquals(null, result);
     }
 }
