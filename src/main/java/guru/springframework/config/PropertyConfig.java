@@ -10,14 +10,6 @@ import org.springframework.context.annotation.PropertySources;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 @Configuration
-@PropertySources(
-        {
-                @PropertySource("classpath:datasource.properties"),
-                @PropertySource("classpath:jms.properties")
-        }
-
-)
-@PropertySource("classpath:datasource.properties")
 public class PropertyConfig {
     @Value("${guru.user}")
     String user;
@@ -48,9 +40,5 @@ public class PropertyConfig {
         fakeJmsDataSource.setUrl(jmsUrl);
         return fakeJmsDataSource;
     }
-    @Bean
-    public static PropertySourcesPlaceholderConfigurer properties(){
-        PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer=new PropertySourcesPlaceholderConfigurer();
-        return propertySourcesPlaceholderConfigurer;
-    }
+
 }
