@@ -3,3 +3,11 @@ guru:
     user: JohnJMS
     password: somepass
     url: dhasvcgdsvc
+
+---
+spring:
+  profiles:
+    de
+guru:
+  jms:
+    user: JohnJMS German
