@@ -1,0 +1,5 @@
+guru:
+  jms:
+    user: JohnJMS
+    password: somepass
+    url: dhasvcgdsvc
