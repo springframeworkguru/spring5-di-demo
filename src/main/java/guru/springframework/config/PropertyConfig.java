@@ -9,7 +9,9 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 /**
  * Created by jt on 6/7/17.
+ * just so i can commit something and see if it is working
  */
+
 @Configuration
 @PropertySource("classpath:datasource.properties")
 public class PropertyConfig {
