@@ -1,8 +1,5 @@
 package guru.springframework.examplebeans;
 
-/**
- * Created by jt on 6/7/17.
- */
 public class FakeJmsBroker {
 
     private String username;

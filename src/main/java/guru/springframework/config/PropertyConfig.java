@@ -11,9 +11,6 @@ import org.springframework.context.annotation.PropertySources;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.env.Environment;
 
-/**
- * Created by jt on 6/7/17.
- */
 @Configuration
 //@PropertySource({"classpath:datasource.properties", "classpath:jms.properties"})
 public class PropertyConfig {
