@@ -1,0 +1,32 @@
+# this is comment
+
+name: Seyda
+
+names:  #yorum satırı
+  - Ahmet
+  - Mehmet
+  - Hasan
+
+pound_sign: "#"
+
+book:
+  author: Seyda Özdemir
+  publisher: YKY
+
+truth: yes
+another_truth: True
+more_true: true
+false: no #No, false, FALSE
+
+string_val: "Bu bir string dizisidir."
+
+colon_string: "my courses: spring boot'a giriş"
+
+include_new_lines:
+  sd asd asd
+  asd sad asd
+  asfdsf sdf sd f
+ignore_new_lines:
+  this is
+  just one long
+  line
