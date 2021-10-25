@@ -13,6 +13,13 @@ import org.springframework.context.annotation.Profile;
  */
 @Configuration
 public class GreetingServiceConfig {
+    /**
+     * Her bir dile ait greeting service'leri burada ayağa kaldırıyorum.
+     * Bunun için önce bir service factory sınıfından bean yaratıyorum.
+     * daha sonra bu bean'in createService methodu ile her dile uygun bir service yaratıyorum.
+     * @param repository
+     * @return
+     */
 
     @Bean
     GreetingServiceFactory greetingServiceFactory(GreetingRepository repository){
