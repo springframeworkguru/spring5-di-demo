@@ -11,6 +11,12 @@ import static org.junit.Assert.assertEquals;
  */
 public class PropertyInjectedControllerTest {
 
+    /**
+     * spring framework gibi davranarak ioc uygulamasını kendimiz gerçekleştiriyoruz.
+     * PropertyInjectedController'ın GreetingService'e ihtiyacı var ve biz bu
+     * dependency'i somut olarak GreetingServiceImpl() yaratarak veriyoruz.
+     * Bu sınıf bu somut nesneyi kullanıyor.
+     */
     private PropertyInjectedController propertyInjectedController;
 
     @Before
