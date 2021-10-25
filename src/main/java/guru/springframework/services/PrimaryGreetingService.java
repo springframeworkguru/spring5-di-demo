@@ -1,8 +1,9 @@
 package guru.springframework.services;
 
-/**
- * Created by jt on 5/24/17.
- */
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Service;
+
+
 public class PrimaryGreetingService implements GreetingService {
 
     private GreetingRepository greetingRepository;

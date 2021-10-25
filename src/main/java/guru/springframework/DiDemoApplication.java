@@ -3,6 +3,7 @@ package guru.springframework;
 import guru.springframework.controllers.GreetingFactoryController;
 import guru.springframework.controllers.MyController;
 import guru.springframework.controllers.PropertyInjectedController;
+import guru.springframework.controllers.SetterInjectedController;
 import guru.springframework.examplebeans.FakeDataSource;
 import guru.springframework.examplebeans.FakeJmsBroker;
 import guru.springframework.services.GreetingServiceFactory;
@@ -27,6 +28,9 @@ public class DiDemoApplication {
 
 		PropertyInjectedController propertyInjectedController=(PropertyInjectedController) ctx.getBean("propertyInjectedController");
 		//System.out.println(propertyInjectedController.sayHello());
+
+		SetterInjectedController setterInjectedController = (SetterInjectedController) ctx.getBean("setterInjectedController");
+		System.out.println(setterInjectedController.sayHello());
 
 		GreetingFactoryController greetingFactoryController=(GreetingFactoryController) ctx.getBean("greetingFactoryController");
 		System.out.println(greetingFactoryController.sayHello());
