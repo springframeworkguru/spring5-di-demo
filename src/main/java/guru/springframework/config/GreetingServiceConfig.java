@@ -1,8 +1,9 @@
 package guru.springframework.config;
 
-import guru.springframework.services.GreetingRepository;
+import guru.springframework.repository.GreetingRepository;
 import guru.springframework.services.GreetingService;
 import guru.springframework.services.GreetingServiceFactory;
+import guru.springframework.services.GreetingServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -43,5 +44,11 @@ public class GreetingServiceConfig {
     @Profile("de")
     GreetingService primaryGermanGreetingService(GreetingServiceFactory greetingServiceFactory){
         return greetingServiceFactory.createGreetingService("de");
+    }
+
+    //repoyu kendisi bağlıyor annotation ile
+    @Bean(name = "basePrimaryGreetingService")
+    GreetingService basePrimaryGreetingService(GreetingRepository repository){
+        return new GreetingServiceImpl(repository);
     }
 }
