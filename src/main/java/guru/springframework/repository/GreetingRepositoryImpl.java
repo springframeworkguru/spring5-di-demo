@@ -1,9 +1,11 @@
-package guru.springframework.services;
+package guru.springframework.repository;
 
 import org.springframework.stereotype.Component;
 
 @Component
 public class GreetingRepositoryImpl implements GreetingRepository {
+
+    public static final String HELLO_GURUS = "Hello good day";
 
     @Override
     public String getEnglishGreeting() {
@@ -20,5 +22,10 @@ public class GreetingRepositoryImpl implements GreetingRepository {
 
         return "Primärer Grußdienst";
 
+    }
+
+    @Override
+    public String getBaseGreeting() {
+        return HELLO_GURUS;
     }
 }

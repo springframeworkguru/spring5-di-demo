@@ -1,4 +1,4 @@
-package guru.springframework.services;
+package guru.springframework.repository;
 
 public interface GreetingRepository {
 
@@ -7,4 +7,6 @@ public interface GreetingRepository {
     String getSpanishGreeting();
 
     String getGermanGreeting();
+
+    String getBaseGreeting();
 }
