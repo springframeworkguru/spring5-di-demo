@@ -1,14 +1,17 @@
 package guru.springframework.services;
 
-import org.springframework.stereotype.Service;
+import guru.springframework.repository.GreetingRepository;
 
-@Service
 public class GreetingServiceImpl implements GreetingService {
 
-    public static final String HELLO_GURUS = "Hello Gurus!!!! - Original";
+    private final GreetingRepository repository;
+
+    public GreetingServiceImpl(GreetingRepository repository) {
+        this.repository = repository;
+    }
 
     @Override
     public String sayGreeting() {
-        return HELLO_GURUS;
+        return repository.getBaseGreeting();
     }
 }
