@@ -1,5 +1,7 @@
 package guru.springframework.services;
 
+import guru.springframework.repository.GreetingRepository;
+
 public class PrimarySpanishGreetingService implements GreetingService {
 
     private GreetingRepository greetingRepository;
