@@ -6,6 +6,8 @@ import guru.springframework.controllers.PropertyInjectedController;
 import guru.springframework.controllers.SetterInjectedController;
 import guru.springframework.examplebeans.FakeDataSource;
 import guru.springframework.examplebeans.FakeJmsBroker;
+import guru.springframework.scope.PrototypeBean;
+import guru.springframework.scope.SingletonBean;
 import guru.springframework.services.GreetingService;
 import guru.springframework.services.GreetingServiceFactory;
 import guru.springframework.services.GreetingServiceImpl;
@@ -41,5 +43,17 @@ public class DiDemoApplication {
 		System.out.println("dependecy injection :");
 		GreetingService greetingService=(GreetingServiceImpl) ctx.getBean("basePrimaryGreetingService");
 		System.out.println(greetingService.sayGreeting());
+
+		System.out.println("///SCOPE");
+		SingletonBean singletonBean1=ctx.getBean(SingletonBean.class);
+		System.out.println(singletonBean1.getMyScope());
+		SingletonBean singletonBean2=ctx.getBean(SingletonBean.class);
+		System.out.println(singletonBean2.getMyScope());
+
+		PrototypeBean prototypeBean1=ctx.getBean(PrototypeBean.class);
+		System.out.println(prototypeBean1.getMyScope());
+		PrototypeBean prototypeBean2=ctx.getBean(PrototypeBean.class);
+		System.out.println(prototypeBean2.getMyScope());
+
 	}
 }
